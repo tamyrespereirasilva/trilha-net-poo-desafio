@@ -1,16 +1,23 @@
 namespace DesafioPOO.Models
 {
-    // TODO: Herdar da classe "Smartphone"
     public class Nokia : Smartphone
     {
-        public Nokia(string numero, string modelo, string imei, int memoria) : base(numero, modelo, imei, memoria)
+        public Nokia(string numero, string modelo, string imei, int memoria, Dictionary<string, string> contatos) : base(numero, modelo, imei, memoria, contatos)
         {
         }
 
-        // TODO: Sobrescrever o método "InstalarAplicativo"
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.WriteLine($"{nomeApp} instalado com sucesso.");
+            List<string> appNokia = new List<string> {"Instagram", "Telegram", "Whatsapp"};
+
+            if (appNokia.Contains(nomeApp))
+            {
+                Console.WriteLine($"Aplicativo {nomeApp} instalado com sucesso.");
+            }
+            else
+            {
+                Console.WriteLine($"O aplicativo {nomeApp} não está disponível no momento.");
+            }
         }
     }
 }

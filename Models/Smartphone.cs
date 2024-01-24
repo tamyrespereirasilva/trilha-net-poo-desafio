@@ -6,19 +6,28 @@ namespace DesafioPOO.Models
         protected string Modelo { get; set; }
         protected string IMEI { get; set; }
         protected int Memoria { get; set; }
+        protected Dictionary<string, string> Contatos { get; set; }
      
 
-        public Smartphone(string numero, string modelo, string imei, int memoria)
+        public Smartphone(string numero, string modelo, string imei, int memoria, Dictionary<string, string> contatos)
         {
             Numero = numero;
             Modelo = modelo;
             IMEI = imei;
             Memoria = memoria;
+            Contatos = contatos;
+            
         }
 
         public void Ligar()
         {
-            Console.WriteLine("Ligando...");
+            Console.WriteLine("Digite o número: ");
+            string numeroContato = Console.ReadLine();
+        
+            if (Contatos.ContainsKey(numeroContato)) {
+                string nomeContato = Contatos[numeroContato];
+                Console.WriteLine($"Ligando para {nomeContato}...");
+            }
         }
 
         public void ReceberLigacao()

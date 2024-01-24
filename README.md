@@ -11,12 +11,19 @@ Você é responsável por modelar um sistema que trabalha com celulares. Para is
 Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
 Você deve criar as suas classes de acordo com o diagrama abaixo:
 
-![Diagrama classes](Imagens/diagrama.png)
+![Diagrama classes](Imagens/diagrama_novo.png)
 
 ## Regras e validações
 1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
 2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo. 
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+- Atualização do Diagrama Entidade Relacionamento;
+- Definição e inicialização das propriedades Modelo(string), IMEI(string), Memoria(int) e Contatos(Dictionary<string, string>) na classe Smartphone;
+- Sobrescrita do método InstalarAplicativo() nas classes Nokia e Iphone: criação de lista com aplicativos disponíveis e estrutura condicional para validar se o aplicativo informado pelo usuário está disponível para ser instalado;
+- Input do aplicativo pelo usuário na classe Program;
+- Melhorias no método Ligar() na classe Smartphone: input do número de telefone para ligar, busca e exibição do nome do contato relacionado ao número;
+- Atribuição de valores ao dicionário de contatos na classe Program.
+
+## Testes
