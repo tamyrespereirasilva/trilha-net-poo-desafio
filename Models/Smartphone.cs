@@ -28,6 +28,10 @@ namespace DesafioPOO.Models
                 string nomeContato = Contatos[numeroContato];
                 Console.WriteLine($"Ligando para {nomeContato}...");
             }
+            else
+            {
+                Console.WriteLine($"Ligando para {numeroContato}...");
+            } 
         }
 
         public void ReceberLigacao()
