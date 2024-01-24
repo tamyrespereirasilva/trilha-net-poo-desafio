@@ -26,4 +26,3 @@ Você deve criar as suas classes de acordo com o diagrama abaixo:
 - Melhorias no método Ligar() na classe Smartphone: input do número de telefone para ligar, busca e exibição do nome do contato relacionado ao número;
 - Atribuição de valores ao dicionário de contatos na classe Program.
 
-## Testes
